@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AudioPlayerComponent implements OnInit {
 
+  /**
+   * 音量
+   */
   volume : Number;
 
   /**
