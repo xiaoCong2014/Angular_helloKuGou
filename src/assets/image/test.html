@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8 />
+<title>test</title>
+<style type="text/css">
+img {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+	var src = 'http://ad72d9d82859ce062cb4.b0.upaiyun.com/apicloud/76285fe040681b170a6d310a52d196ef.mp3';
+    onload = function ()
+    {
+	    var body = document.body;
+
+	    var div = document.createElement ('div');
+	    div.setAttribute ('id', 'player');
+	    div.style.width = '0px';
+	    div.style.height = '0px';
+	    div.style.position = 'absolute';
+	    div.style.top = '-1111px';
+
+	    var music;
+
+	    if (!!window.ActiveXObject)
+	    {
+		    div.innerHTML = '<embed id="music" volume="0" src="' + src + '" type="application/x-mplayer2" autostart="true" loop="true" height="0" width="0" ></embed>';
+	    }
+	    else
+	    {
+		    div.innerHTML = '<audio id="music" preload="auto" volume="1" src="'+src+'"></audio>';
+		    div.children[0].play ();
+	    }
+	    body.appendChild (div);
+    }
+
+    var ck = function (obj)
+    {
+	    var music = document.getElementById ('music');
+	    if (!!window.ActiveXObject)
+	    {
+		    var reg = /(src[\=\"\\s]+)[^\.]+(.mp3\")/;
+		    music.Stop ();
+		    music.outerHTML = music.outerHTML.replace (reg, "$1" + src);
+	    }
+	    else
+	    {
+		    music.pause ();
+		    if (music.readyState == 4)
+		    {
+			    music.currentTime = 0;
+		    }
+		    music.src = src;
+		    music.play ();
+	    }
+    }
+</script>
+</head>
+<body>
+	<img src="Lenka.jpg" onclick="ck(this);" title="Trouble Is A Friend" />
+	<img src="Daz Sampson.jpg" onclick="ck(this);" title="Teenage Life" />
+</body>
+</html>
