@@ -13,7 +13,7 @@ import { SayHelloComponent } from './say-hello/say-hello.component';
 @NgModule({
   declarations: [
     AppComponent ,
-    SayHelloComponent,
+    SayHelloComponent// ,
     // AudioPlayerComponent
   ],
   imports: [
