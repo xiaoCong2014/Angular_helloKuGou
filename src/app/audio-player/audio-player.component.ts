@@ -26,4 +26,13 @@ export class AudioPlayerComponent implements OnInit {
     this.audioSrc = 'http://ad72d9d82859ce062cb4.b0.upaiyun.com/apicloud/76285fe040681b170a6d310a52d196ef.mp3';
   }
 
+  playAudio(): void {
+    // document.getElementById('myAudio').play();
+
+    // $('myAudio').(); // todo
+    // myAudio.play();
+    console.log( "playAudio()" );
+
+  }
+
 }
