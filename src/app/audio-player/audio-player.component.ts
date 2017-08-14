@@ -12,12 +12,12 @@ export class AudioPlayerComponent implements OnInit {
   /**
    * 音量
    */
-  volume : Number;
+  volume: Number;
 
   /**
    * 音频源
    */
-  audioSrc : string;
+  audioSrc: string;
 
   constructor() { }
 
