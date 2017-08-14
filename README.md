@@ -2,12 +2,14 @@
 
 需求 :
 界面上要有两个组件 ,  点击任意一个都会发出"hello 酷狗"的声音 ( 音频源是在线的 )
-
-所用技术 :
-Angular 4
+原本的 demo 在 src/assets/image/test.html , 直接打开 , 不需要运行什么 , 因为
+它是用纯JavaScript 写的.
 
 遇到的问题 :
 组件写法有问题 , 语法上正常 , 编译不报错 , 但代码逻辑有问题
+
+所用技术 :
+Angular 4
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 
