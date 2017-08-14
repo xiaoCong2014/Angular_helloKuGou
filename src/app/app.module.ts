@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { SayHelloComponent } from './say-hello/say-hello.component';
-// import { AudioPlayerComponent } from './audio-player/audio-player.component';
+import { AudioPlayerComponent } from './audio-player/audio-player.component';
 
 // 错的
 // import { SayHelloComponent } from './src/app/say-hello/say-hello.component';
@@ -13,8 +13,8 @@ import { SayHelloComponent } from './say-hello/say-hello.component';
 @NgModule({
   declarations: [
     AppComponent ,
-    SayHelloComponent// ,
-    // AudioPlayerComponent
+    SayHelloComponent ,
+    AudioPlayerComponent
   ],
   imports: [
     BrowserModule
