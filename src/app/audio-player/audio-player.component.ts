@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * 界面上看不到的组件 , 负责发出声音
+ */
 @Component({
   selector: 'app-audio-player',
   templateUrl: './audio-player.component.html',

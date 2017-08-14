@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * 播放组件 , 是个图片按钮  <br>
+ * 被点击的时候 , 使能发出声音的组件发声
+ */
 @Component({
   selector: 'app-say-hello',
   templateUrl: './say-hello.component.html',
