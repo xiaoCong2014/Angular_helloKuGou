@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PlayAudioServiceService} from '../service/play-audio-service.service';
 
 /**
  * 播放组件 , 是个图片按钮  <br>
@@ -21,7 +22,7 @@ export class SayHelloComponent implements OnInit {
    */
   imgSrc: string;
 
-  constructor() {
+  constructor( private playAudioServiceService: PlayAudioServiceService) {
   }
 
   ngOnInit() {
@@ -30,8 +31,8 @@ export class SayHelloComponent implements OnInit {
   }
 
   sayHello() {
-    // log.
-    console.log('sayHello');
+    // console.log('sayHello');
+    this.playAudioServiceService.playAudio();
   }
 
 }
