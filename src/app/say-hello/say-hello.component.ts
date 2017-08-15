@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PlayAudioServiceService} from '../service/play-audio-service.service';
+import {AudioPlayerComponent} from '../audio-player/audio-player.component';
 
 /**
  * 播放组件 , 是个图片按钮  <br>
@@ -22,7 +23,7 @@ export class SayHelloComponent implements OnInit {
    */
   imgSrc: string;
 
-  constructor( private playAudioServiceService: PlayAudioServiceService) {
+  constructor( private playAudioServiceService: PlayAudioServiceService ) {// playAudioServiceService: PlayAudioServiceService, audioPlayerComponent: AudioPlayerComponent
   }
 
   ngOnInit() {
@@ -31,8 +32,15 @@ export class SayHelloComponent implements OnInit {
   }
 
   sayHello() {
-    // console.log('sayHello');
+
+    // 直接调用
+    // this.audioPlayerComponent.playAudio();
+
+    // 通过服务
     this.playAudioServiceService.playAudio();
+
+    // console.log('SayHelloComponent sayHello()');
+
   }
 
 }
