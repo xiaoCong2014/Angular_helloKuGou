@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {PlayAudioServiceService} from '../service/play-audio-service.service';
-import {AudioPlayerComponent} from '../audio-player/audio-player.component';
+// import {AudioPlayerComponent} from '../audio-player/audio-player.component';
 
 /**
  * 播放组件 , 是个图片按钮  <br>
@@ -16,19 +16,22 @@ export class SayHelloComponent implements OnInit {
   /**
    * 鼠标移动的图片上面
    */
-  title: string;
+  @Input()
+  title: string = '';
 
   /**
    * 图片地址
    */
-  imgSrc: string;
+  @Input()
+  imgSrc: string = '';
 
-  constructor( private playAudioServiceService: PlayAudioServiceService ) {// playAudioServiceService: PlayAudioServiceService, audioPlayerComponent: AudioPlayerComponent
+  constructor( private playAudioServiceService: PlayAudioServiceService ) {
+    // playAudioServiceService: PlayAudioServiceService, audioPlayerComponent: AudioPlayerComponent
   }
 
   ngOnInit() {
-    this.title = 'Lenka.jpg';
-    this.imgSrc = '../../assets/image/Lenka.jpg';
+    // this.title = 'Lenka.jpg';
+    // this.imgSrc = '../../assets/image/Lenka.jpg';
   }
 
   sayHello() {
