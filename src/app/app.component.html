@@ -1,25 +1,25 @@
 <div style="text-align:center">
 
-  <!--{{title}}-->
-
-  <!--<app-say-hello ></app-say-hello>-->
+  <!--{{appTitle}}-->
 
   <!--组件的属性(图片)由这里填入-->
-  <app-say-hello [title] = "title"
-                 [imgSrc] = "imgSrc">
+  <app-say-hello
+    [title]  = "title"
+    [imgSrc] = "imgSrc"
+  >
   </app-say-hello>
 
-  <!---->
 
   <!--看不见的音频元素-->
-  <app-audio-player></app-audio-player>
+  <app-audio-player
+    [volume]   = "volume"
+    [audioSrc] = "audioSrc"
+  >
+  </app-audio-player>
 
-  <!--<app-say-hello></app-say-hello>-->
-
-  <!--<img [src]="Lenka.jpg" (click)="sayHello" [title]="Trouble Is A Friend" />-->
-  <!--<img src="Daz Sampson.jpg" (click)="sayHello" [title]="Teenage Life" />-->
 </div>
 
+<!--region 下面的是自动生成的-->
 
 <!--The content below is only a placeholder and can be replaced.-->
 <!--<div style="text-align:center">-->
@@ -41,3 +41,4 @@
   <!--</li>-->
 <!--</ul>-->
 
+<!--endregion 下面的是自动生成的-->

@@ -1,4 +1,4 @@
-import { Component, OnInit , ElementRef  } from '@angular/core';
+import { Component, OnInit , ElementRef , Input } from '@angular/core';
 // import { ElementRef } from "_@angular_core@4.3.4@@angular/core/src/core";
 // import { ElementRef } from "@angular/core/src/core";
 
@@ -16,11 +16,13 @@ export class AudioPlayerComponent implements OnInit {
   /**
    * 音量
    */
+  @Input()
   volume: Number;
 
   /**
    * 音频源
    */
+  @Input()
   audioSrc: string;
 
   /**
@@ -37,8 +39,8 @@ export class AudioPlayerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.volume = 1;
-    this.audioSrc = 'http://ad72d9d82859ce062cb4.b0.upaiyun.com/apicloud/76285fe040681b170a6d310a52d196ef.mp3';
+    // this.volume = 1;
+    // this.audioSrc = 'http://ad72d9d82859ce062cb4.b0.upaiyun.com/apicloud/76285fe040681b170a6d310a52d196ef.mp3';
   }
 
   playAudio(): void {
