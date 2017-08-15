@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ElementRef  } from '@angular/core';
+// import { ElementRef } from "_@angular_core@4.3.4@@angular/core/src/core";
+// import { ElementRef } from "@angular/core/src/core";
+
 /**
  * 界面上看不到的组件 , 负责发出声音
  */
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-audio-player',
   templateUrl: './audio-player.component.html',
   styleUrls: ['./audio-player.component.css']
+  // ],provide
 })
 export class AudioPlayerComponent implements OnInit {
 
@@ -19,7 +23,18 @@ export class AudioPlayerComponent implements OnInit {
    */
   audioSrc: string;
 
-  constructor() { }
+  /**
+   * 存 整个组件的dom
+   */
+  public nativeElement: any;
+
+  // constructor( ) {
+  //
+  // }
+
+  constructor( private elementRef: ElementRef ) {
+    this.nativeElement = elementRef.nativeElement;
+  }
 
   ngOnInit() {
     this.volume = 1;
@@ -27,11 +42,17 @@ export class AudioPlayerComponent implements OnInit {
   }
 
   playAudio(): void {
-    // document.getElementById('myAudio').play();
 
-    // $('myAudio').(); // todo
-    // myAudio.play();
-    console.log( "playAudio()" );
+    // 根据 标签的名称 来选择
+    this.nativeElement.querySelector('audio').play();
+
+    // 错误 this.nativeElement.querySelector('myAudio').play();
+
+    // 失败 document.getElementById('myAudio').play();
+
+    // 失败 $('myAudio').(); // todo
+    // 失败 myAudio.play();
+    // console.log( "playAudio()" );
 
   }
 
